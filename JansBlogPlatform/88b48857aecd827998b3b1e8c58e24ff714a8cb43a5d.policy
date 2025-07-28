@@ -1,0 +1,6 @@
+@id("ReadersCanOnlyView")
+permit (
+    principal in Jans::Role::"Reader",
+    action == Jans::Action::"View",
+    resource is Jans::Article
+);

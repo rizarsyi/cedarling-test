@@ -1,0 +1,6 @@
+@id("EditorCanEditViewArticleNotCreate")
+permit (
+    principal in Jans::Role::"Editor",
+    action in [Jans::Action::"Edit", Jans::Action::"View"],
+    resource is Jans::Article
+);

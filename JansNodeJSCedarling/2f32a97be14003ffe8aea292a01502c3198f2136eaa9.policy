@@ -1,0 +1,6 @@
+@id("AuditorCanViewOnly")
+permit (
+  principal in Jans::Role::"auditor",
+  action == Jans::Action::"View",
+  resource
+);

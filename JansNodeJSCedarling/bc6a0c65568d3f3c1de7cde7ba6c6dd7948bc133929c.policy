@@ -1,0 +1,9 @@
+@id("OnlyAdminCanDelete")
+forbid (
+    principal,
+    action == Jans::Action::"Delete",
+    resource
+)
+unless {
+   principal in Jans::Role::"admin"
+};

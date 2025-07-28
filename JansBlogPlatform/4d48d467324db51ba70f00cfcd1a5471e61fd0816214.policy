@@ -1,0 +1,8 @@
+@id("PremiumPlanAccessAIGenerateImageVideoTool")
+permit (
+    principal,
+    action in [Jans::Action::"GenerateImage", Jans::Action::"GenerateVideo"],
+    resource is Jans::AItools
+) when {
+    principal.plan == "premium"    
+};

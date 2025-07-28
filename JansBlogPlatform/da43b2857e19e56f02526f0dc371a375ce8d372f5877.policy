@@ -1,0 +1,6 @@
+@id("AuthorCanCreateEditDeleteView")
+permit (
+    principal in Jans::Role::"Author",
+    action in [Jans::Action::"Create", Jans::Action::"Edit", Jans::Action::"Delete", Jans::Action::"View"],
+    resource is Jans::Article
+);
